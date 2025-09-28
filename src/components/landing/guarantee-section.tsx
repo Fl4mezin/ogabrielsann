@@ -1,4 +1,5 @@
 import { ShieldIcon, CheckIcon } from '@/components/icons';
+import { PixelatedButton } from '@/components/ui/pixelated-button';
 import { PixelatedCard } from '@/components/ui/pixelated-card';
 
 export function GuaranteeSection() {
@@ -35,6 +36,22 @@ export function GuaranteeSection() {
           </div>
         </div>
       </PixelatedCard>
+      <div className="text-center mt-10">
+        <PixelatedButton
+          size="lg"
+          className="bg-pixel-green text-black hover:bg-green-400 w-full md:w-auto animate-pulse-8bit text-base md:text-lg"
+          asChild
+        >
+          <a href="#">
+            <span className="md:hidden">
+              ME TORNAR UM
+              <br />
+              ESTUDANTE PRO
+            </span>
+            <span className="hidden md:inline">ME TORNAR UM ESTUDANTE PRO</span>
+          </a>
+        </PixelatedButton>
+      </div>
     </section>
   );
 }
