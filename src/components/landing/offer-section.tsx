@@ -32,7 +32,7 @@ export function OfferSection() {
               asChild
             >
               <a href="#">
-                🚀 PRESS START TO WIN!
+                ME TORNAR UM ESTUDANDO PRO
               </a>
             </PixelatedButton>
           </div>
