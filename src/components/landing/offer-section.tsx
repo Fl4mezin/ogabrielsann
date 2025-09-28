@@ -24,7 +24,7 @@ export function OfferSection() {
             </div>
 
             <div className="my-6 md:my-8">
-              <CountdownTimer />
+              {/* <CountdownTimer /> */}
             </div>
 
             <PixelatedButton
