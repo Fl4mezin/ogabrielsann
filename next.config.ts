@@ -33,6 +33,18 @@ const nextConfig: NextConfig = {
         hostname: 'i.imgur.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'conteudo.imguol.com.br',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 's2-g1.glbimg.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
