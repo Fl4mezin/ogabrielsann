@@ -2,45 +2,41 @@
 
 import { useState, useEffect } from 'react';
 
-const calculateTimeLeft = () => {
-  // Set the offer to end 24 hours from the first render
+export function CountdownTimer() {
   const [targetDate] = useState(() => {
     const date = new Date();
     date.setHours(date.getHours() + 24);
     return date;
   });
 
-  const difference = +targetDate - +new Date();
-  let timeLeft = {
-    hours: '00',
-    minutes: '00',
-    seconds: '00',
+  const calculateTimeLeft = () => {
+    const difference = +targetDate - +new Date();
+    let timeLeft = {
+      hours: '00',
+      minutes: '00',
+      seconds: '00',
+    };
+
+    if (difference > 0) {
+      timeLeft = {
+        hours: String(Math.floor((difference / (1000 * 60 * 60)) % 24)).padStart(2, '0'),
+        minutes: String(Math.floor((difference / 1000 / 60) % 60)).padStart(2, '0'),
+        seconds: String(Math.floor((difference / 1000) % 60)).padStart(2, '0'),
+      };
+    }
+
+    return timeLeft;
   };
 
-  if (difference > 0) {
-    timeLeft = {
-      hours: String(Math.floor((difference / (1000 * 60 * 60)) % 24)).padStart(2, '0'),
-      minutes: String(Math.floor((difference / 1000 / 60) % 60)).padStart(2, '0'),
-      seconds: String(Math.floor((difference / 1000) % 60)).padStart(2, '0'),
-    };
-  }
+  const [timeLeft, setTimeLeft] = useState(() => calculateTimeLeft());
 
-  return timeLeft;
-};
-
-export function CountdownTimer() {
-  const [timeLeft, setTimeLeft] = useState({ hours: '23', minutes: '59', seconds: '59' });
-  
   useEffect(() => {
-    // We calculate initial time in useEffect to avoid hydration mismatch
-    setTimeLeft(calculateTimeLeft());
-
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [targetDate]);
 
   return (
     <div className="flex flex-col items-center">
