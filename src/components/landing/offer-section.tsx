@@ -1,5 +1,4 @@
 import { PixelatedButton } from '@/components/ui/pixelated-button';
-import { CountdownTimer } from './countdown-timer';
 import { UrgencyMessage } from './urgency-message';
 import Image from 'next/image';
 
@@ -10,7 +9,7 @@ export function OfferSection() {
         <UrgencyMessage />
         <div className="mt-8 mb-8">
           <Image
-            src="https://i.imgur.com/xwvB9Qe.png"
+            src="https://i.imgur.com/WzBd5MA.png"
             alt="Product bundle"
             width={600}
             height={400}
