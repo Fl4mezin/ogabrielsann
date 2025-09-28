@@ -14,7 +14,10 @@ export function OfferSection() {
 
             <div className="text-left text-sm md:text-base font-bold w-full max-w-md mx-auto p-4 space-y-2 bg-gray-100 border-2 border-black">
               <p>✅ 3 TEMPLATES PREMIUM</p>
-              <p>✅ + 5 BÔNUS EXCLUSIVOS</p>
+              <p>✅ Métodos eficazes de estudo</p>
+              <p>✅ Acesso vitalício</p>
+              <p>✅ Acesso imediato</p>
+              <p>✅ Suporte via Whatsapp</p>
               <p className="mt-4"><span className="line-through">De: R$ 47,00</span></p>
               <p className="text-lg md:text-xl font-bold">POR APENAS: R$ 19,90</p>
               <p className="mt-2 text-pixel-red animate-blink">🔥 PROMOÇÃO VOLTA ÀS AULAS!</p>
