@@ -20,7 +20,6 @@ export function OfferSection() {
               <p>✅ Suporte via Whatsapp</p>
               <p className="mt-4"><span className="line-through">De: R$ 47,00</span></p>
               <p className="text-lg md:text-xl font-bold">POR APENAS: R$ 19,90</p>
-              <p className="mt-2 text-pixel-red animate-blink">🔥 PROMOÇÃO VOLTA ÀS AULAS!</p>
             </div>
             
             <div className="my-6 md:my-8">
