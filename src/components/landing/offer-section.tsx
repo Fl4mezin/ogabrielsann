@@ -23,7 +23,7 @@ export function OfferSection() {
               <p className="text-lg md:text-xl font-bold">POR APENAS: R$ 19,90</p>
             </div>
             
-            <p className="text-black/50 text-sm mt-4">487 Estudantes se tornaram PRO</p>
+            <p className="text-black/50 text-sm mt-4">+472 Estudantes se tornaram PRO</p>
 
             <div className="my-6 md:my-8">
               {/* <CountdownTimer /> */}
