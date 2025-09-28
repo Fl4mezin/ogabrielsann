@@ -20,7 +20,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
       </head>
-      <body className={cn('font-headline antialiased', process.env.NODE_ENV === 'development' ? 'debug-screens' : undefined)}>
+      <body className={cn('font-headline antialiased')}>
         {children}
         <Toaster />
       </body>
