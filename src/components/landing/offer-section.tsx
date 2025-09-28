@@ -39,7 +39,14 @@ export function OfferSection() {
               className="bg-pixel-green text-black hover:bg-green-400 w-full md:w-auto animate-pulse-8bit text-base md:text-lg mt-6"
               asChild
             >
-              <a href="#">ME TORNAR UM ESTUDANTE PRO</a>
+              <a href="#">
+                <span className="md:hidden">
+                  ME TORNAR UM
+                  <br />
+                  ESTUDANTE PRO
+                </span>
+                <span className="hidden md:inline">ME TORNAR UM ESTUDANTE PRO</span>
+              </a>
             </PixelatedButton>
           </div>
         </div>

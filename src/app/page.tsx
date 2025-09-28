@@ -4,7 +4,7 @@ import { SolutionsSection } from '@/components/landing/solutions-section';
 import { TestimonialsSection } from '@/components/landing/testimonials-section';
 import { OfferSection } from '@/components/landing/offer-section';
 import { GuaranteeSection } from '@/components/landing/guarantee-section';
-import { HeadlineGeneratorSection } from '@/components/landing/headline-generator-section';
+import { Footer } from '@/components/landing/footer';
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <TestimonialsSection />
       <OfferSection />
       <GuaranteeSection />
-      <HeadlineGeneratorSection />
+      <Footer />
     </main>
   );
 }
