@@ -9,7 +9,7 @@ export function OfferSection() {
         <UrgencyMessage />
         <div className="bg-pixel-yellow text-black p-4 md:p-8 border-4 border-black shadow-pixel mt-10">
           <div className="border-4 border-black p-4 md:p-6 bg-white">
-            <h3 className="text-xl md:text-3xl font-bold mb-4">PACOTE COMPLETO</h3>
+            <h3 className="text-xl md:text-3xl font-bold mb-4">STUDENT PRO</h3>
 
             <div className="text-left text-sm md:text-base font-bold w-full max-w-md mx-auto p-4 space-y-2 bg-gray-100 border-2 border-black">
               <p>✅ 3 TEMPLATES PREMIUM</p>
