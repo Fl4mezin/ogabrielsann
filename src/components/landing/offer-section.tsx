@@ -39,7 +39,7 @@ export function OfferSection() {
               className="bg-pixel-green text-black hover:bg-green-400 w-full md:w-auto animate-pulse-8bit text-base md:text-lg mt-6"
               asChild
             >
-              <a href="#">
+              <a href="https://go.goatpayments.com.br/ttmmp81duz">
                 <span className="md:hidden">
                   ME TORNAR UM
                   <br />
