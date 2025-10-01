@@ -12,7 +12,7 @@ export function UrgencyMessage() {
   }, []);
 
   return (
-    <div className="bg-pixel-red text-white p-4 pixel-border animate-blink">
+    <div className="bg-pixel-red text-white p-4 pixel-border animate-heartbeat">
       <h2 className="text-xl md:text-3xl font-bold">
         OFERTA VÁLIDA APENAS HOJE ({currentDate})
       </h2>

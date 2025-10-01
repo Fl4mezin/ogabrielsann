@@ -42,7 +42,7 @@ export function CountdownTimer() {
     <div className="flex flex-col items-center">
       <p className="text-sm md:text-base font-bold mb-2">⏰ TEMPO RESTANTE:</p>
       <div className="bg-black text-pixel-red p-2 md:p-4 border-2 border-gray-600 shadow-inner w-fit">
-        <span className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-widest animate-blink">
+        <span className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-widest animate-heartbeat">
           {timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
         </span>
       </div>

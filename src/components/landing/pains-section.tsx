@@ -47,7 +47,7 @@ export function PainsSection() {
         ))}
       </div>
       <div className="mt-10 md:mt-12">
-        <PixelatedCard className="bg-pixel-red text-white p-4 md:p-6 animate-blink border-4 border-black">
+        <PixelatedCard className="bg-pixel-red text-white p-4 md:p-6 animate-heartbeat border-4 border-black">
           <p className="text-base md:text-2xl font-bold">
             = REPROVAS + ESTRESSE + FUTURO DESTRUÍDO
           </p>

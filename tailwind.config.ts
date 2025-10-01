@@ -88,12 +88,21 @@ export default {
           '0%, 100%': { transform: 'scale(1)' },
           '50%': { transform: 'scale(1.05)' },
         },
+        heartbeat: {
+          '0%': { transform: 'scale(1)' },
+          '10%': { transform: 'scale(1.03)' },
+          '20%': { transform: 'scale(1)' },
+          '30%': { transform: 'scale(1.03)' },
+          '40%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1)' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         blink: 'blink 1s step-end infinite',
         'pulse-8bit': 'pulse-8bit 1s ease-in-out infinite',
+        heartbeat: 'heartbeat 2s ease-in-out infinite',
       },
     },
   },
