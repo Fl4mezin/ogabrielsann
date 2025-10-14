@@ -20,7 +20,7 @@ export function HeroSection() {
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="w-[90%] mx-auto sm:w-auto sm:mx-0 bg-green-500 hover:bg-green-600">
                 <a href="#offer">Quero Mudar Isso Agora</a>
               </Button>
             </div>

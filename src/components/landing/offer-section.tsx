@@ -57,7 +57,7 @@ export function OfferSection() {
                   <span>Suporte via Whatsapp</span>
                 </li>
               </ul>
-               <Button size="lg" className="w-full mt-8 text-lg" asChild>
+               <Button size="lg" className="w-[90%] mx-auto sm:w-full mt-8 text-lg bg-green-500 hover:bg-green-600" asChild>
                 <a href="https://go.goatpayments.com.br/ttmmp81duz">
                   ME TORNAR UM ESTUDANTE PRO
                 </a>
