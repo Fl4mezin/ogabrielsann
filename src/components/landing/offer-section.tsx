@@ -24,6 +24,60 @@ function OfferHeadline() {
   );
 }
 
+function CountdownTimer() {
+  const [timeLeft, setTimeLeft] = useState({ hours: '00', minutes: '00', seconds: '00' });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date();
+      const endOfDay = new Date(now);
+      endOfDay.setHours(23, 59, 59, 999);
+
+      const totalSeconds = (endOfDay.getTime() - now.getTime()) / 1000;
+
+      if (totalSeconds < 0) {
+        setTimeLeft({ hours: '00', minutes: '00', seconds: '00' });
+        clearInterval(interval);
+        return;
+      }
+
+      const hours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = Math.floor(totalSeconds % 60);
+
+      setTimeLeft({
+        hours: String(hours).padStart(2, '0'),
+        minutes: String(minutes).padStart(2, '0'),
+        seconds: String(seconds).padStart(2, '0'),
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="mt-8 text-center">
+      <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
+        O tempo para ter acesso ao STUDENT PRO com esta condição EXCLUSIVA está se esgotando:
+      </p>
+      <div className="flex justify-center items-center space-x-4">
+        <div className="text-center bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md">
+          <span className="text-4xl font-bold text-red-500">{timeLeft.hours}</span>
+          <p className="text-sm text-gray-500 dark:text-gray-400">Horas</p>
+        </div>
+        <div className="text-center bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md">
+          <span className="text-4xl font-bold text-red-500">{timeLeft.minutes}</span>
+          <p className="text-sm text-gray-500 dark:text-gray-400">Minutos</p>
+        </div>
+        <div className="text-center bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md">
+          <span className="text-4xl font-bold text-red-500">{timeLeft.seconds}</span>
+          <p className="text-sm text-gray-500 dark:text-gray-400">Segundos</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function OfferSection() {
   return (
     <section id="offer" className="w-full py-12 md:py-24 lg:py-32 bg-background">
@@ -85,6 +139,7 @@ export function OfferSection() {
             </CardContent>
           </Card>
         </div>
+        <CountdownTimer />
       </div>
     </section>
   );
