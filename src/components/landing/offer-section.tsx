@@ -30,8 +30,8 @@ export function OfferSection() {
               <CardTitle className="text-3xl font-bold">STUDENT PRO</CardTitle>
               <CardDescription>O pacote completo para o sucesso acadêmico.</CardDescription>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold">R$ 19,90</span>
-                  <span className="ml-2 text-xl font-medium text-gray-500 line-through dark:text-gray-400">R$ 47,00</span>
+                  <span className="text-4xl font-bold text-green-600">R$ 19,90</span>
+                  <span className="ml-2 text-xl font-medium text-red-500 line-through dark:text-red-400">R$ 47,00</span>
                 </div>
             </CardHeader>
             <CardContent className="p-6 lg:p-8">
