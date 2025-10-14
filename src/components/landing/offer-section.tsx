@@ -30,7 +30,7 @@ export function OfferSection() {
               <CardTitle className="text-3xl font-bold">STUDENT PRO</CardTitle>
               <CardDescription>O pacote completo para o sucesso acadêmico.</CardDescription>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold text-green-600">R$ 19,90</span>
+                  <span className="text-4xl font-bold text-green-500">R$ 19,90</span>
                   <span className="ml-2 text-xl font-medium text-red-500 line-through dark:text-red-400">R$ 47,00</span>
                 </div>
             </CardHeader>
@@ -58,7 +58,7 @@ export function OfferSection() {
                 </li>
               </ul>
                <Button size="lg" className="w-[90%] mx-auto sm:w-full mt-8 text-lg bg-green-500 hover:bg-green-600" asChild>
-                <a href="https://go.goatpayments.com.br/ttmmp81duz">
+                <a href="https://pay.cakto.com.br/jwf4g7o_607138">
                   ME TORNAR UM ESTUDANTE PRO
                 </a>
               </Button>

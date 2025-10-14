@@ -12,7 +12,7 @@ export function GuaranteeSection() {
               Proteção Total
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-              🛡️ PROTEÇÃO TOTAL - SEM RISCOS
+              Garantia de Satisfação
             </h2>
           </div>
         </div>
@@ -54,7 +54,7 @@ export function GuaranteeSection() {
               className="bg-green-500 text-white hover:bg-green-600 w-[90%] md:w-auto text-base md:text-lg shadow-lg"
               asChild
             >
-              <a href="https://go.goatpayments.com.br/ttmmp81duz">
+              <a href="https://pay.cakto.com.br/jwf4g7o_607138">
                   ME TORNAR UM ESTUDANTE PRO
               </a>
             </Button>
