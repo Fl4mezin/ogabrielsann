@@ -5,6 +5,7 @@ import { TestimonialsSection } from '@/components/landing/testimonials-section';
 import { OfferSection } from '@/components/landing/offer-section';
 import { GuaranteeSection } from '@/components/landing/guarantee-section';
 import { Footer } from '@/components/landing/footer';
+import { SocialProofNotification } from '@/components/landing/social-proof-notification';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <OfferSection />
       <GuaranteeSection />
       <Footer />
+      <SocialProofNotification />
     </main>
   );
 }

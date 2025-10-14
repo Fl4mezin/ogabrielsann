@@ -70,3 +70,36 @@
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 }
+
+.social-proof-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #38a169;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  transform: translateY(100%);
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  max-width: 280px;
+}
+
+.social-proof-notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .social-proof-notification {
+    left: 10px;
+    right: 10px;
+    max-width: unset;
+    font-size: 14px;
+  }
+}
