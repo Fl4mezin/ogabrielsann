@@ -1,5 +1,5 @@
-import { SkullIcon } from '@/components/icons';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 export function HeroSection() {
   return (
@@ -10,13 +10,21 @@ export function HeroSection() {
             <div className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-600 dark:bg-red-900/20 dark:text-red-500">
               Atenção, Estudante!
             </div>
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-destructive flex items-center justify-center gap-4">
-              <SkullIcon className="w-8 h-8 md:w-12 md:h-12" />
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-destructive animate-pulse">
               VOCÊ VAI REPROVAR POR DESORGANIZAÇÃO
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
               Enquanto seus colegas passam com FACILIDADE usando métodos que FUNCIONAM, você continua perdendo prazos, esquecendo provas e tirando notas baixas.
             </p>
+            <div className="flex justify-center py-6">
+                <Image
+                    src="https://i.imgur.com/JzOcusg.png"
+                    alt="Product preview"
+                    width={800}
+                    height={450}
+                    className="rounded-lg shadow-lg"
+                />
+            </div>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center pt-6">
             <Button asChild size="lg" className="w-[90%] mx-auto sm:w-auto sm:mx-0 bg-green-500 hover:bg-green-600">
