@@ -4,7 +4,9 @@ import {
   CheckIcon,
   GraduationCapIcon,
 } from '@/components/icons';
-import { PixelatedCard } from '@/components/ui/pixelated-card';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
+
 
 const templates = [
   {
@@ -48,51 +50,65 @@ const templates = [
 
 const colorClasses = {
   blue: {
-    border: 'border-pixel-blue',
-    text: 'text-pixel-blue',
-    iconBg: 'bg-pixel-blue'
+    bg: 'bg-blue-100 dark:bg-blue-900/20',
+    text: 'text-blue-600 dark:text-blue-400',
+    iconBg: 'bg-blue-500',
+    border: 'border-blue-200 dark:border-blue-800'
   },
   green: {
-    border: 'border-pixel-green',
-    text: 'text-pixel-green',
-    iconBg: 'bg-pixel-green'
+    bg: 'bg-green-100 dark:bg-green-900/20',
+    text: 'text-green-600 dark:text-green-400',
+    iconBg: 'bg-green-500',
+    border: 'border-green-200 dark:border-green-800'
   },
   purple: {
-    border: 'border-pixel-purple',
-    text: 'text-pixel-purple',
-    iconBg: 'bg-pixel-purple'
+    bg: 'bg-purple-100 dark:bg-purple-900/20',
+    text: 'text-purple-600 dark:text-purple-400',
+    iconBg: 'bg-purple-500',
+    border: 'border-purple-200 dark:border-purple-800'
   },
 };
 
 export function SolutionsSection() {
   return (
-    <section className="w-full bg-gray-100 py-12 px-4 md:py-24 text-center">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-4xl font-bold mb-10 text-shadow-pixel">
-          ⚡ POWER-UP PARA ESTUDANTES VENCEDORES
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+    <section className="w-full py-12 md:py-24 lg:py-32">
+      <div className="container space-y-12 px-4 md:px-6">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="space-y-2">
+            <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+              Nossas Ferramentas
+            </div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              ⚡ POWER-UP PARA ESTUDANTES VENCEDORES
+            </h2>
+            <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              Templates profissionais e fáceis de usar no Notion que vão transformar sua forma de estudar e organizar sua vida.
+            </p>
+          </div>
+        </div>
+        <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
           {templates.map((template) => {
             const colors = colorClasses[template.color as keyof typeof colorClasses];
             return (
-              <PixelatedCard
-                key={template.title}
-                className={`!border-4 md:!border-8 ${colors.border} p-6 flex flex-col items-center hover:shadow-pixel-light transition-shadow duration-200`}
-              >
-                <div className={`p-3 md:p-4 ${colors.iconBg} border-2 md:border-4 border-black mb-4`}>
-                  <template.icon className="w-10 h-10 md:w-12 md:h-12 text-white" />
-                </div>
-                <h3 className={`text-xl md:text-2xl font-bold ${colors.text}`}>{template.title}</h3>
-                <p className="text-dark-gray font-bold text-xs md:text-sm mb-6">{template.subtitle}</p>
-                <ul className="space-y-2 text-left w-full">
-                  {template.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <CheckIcon className={`w-4 h-4 md:w-5 md:h-5 mt-0.5 shrink-0 ${colors.text}`} />
-                      <span className="text-xs md:text-sm text-dark-gray">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </PixelatedCard>
+              <Card key={template.title} className={cn('shadow-lg hover:shadow-2xl transition-shadow duration-300', colors.border)}>
+                 <CardHeader className="text-center items-center">
+                    <div className={cn('p-4 rounded-full mb-4', colors.iconBg)}>
+                      <template.icon className="w-10 h-10 text-white" />
+                    </div>
+                    <CardTitle className={cn('text-2xl font-bold', colors.text)}>{template.title}</CardTitle>
+                    <p className="text-sm font-semibold text-gray-500 dark:text-gray-400">{template.subtitle}</p>
+                 </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-left w-full">
+                    {template.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3">
+                        <CheckIcon className={cn('w-5 h-5 mt-1 shrink-0', colors.text)} />
+                        <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
             );
           })}
         </div>

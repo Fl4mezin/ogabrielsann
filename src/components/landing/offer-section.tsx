@@ -1,54 +1,70 @@
-import { PixelatedButton } from '@/components/ui/pixelated-button';
-import { UrgencyMessage } from './urgency-message';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { CheckIcon } from '@/components/icons';
 import Image from 'next/image';
 
 export function OfferSection() {
   return (
-    <section className="w-full bg-gray-100 py-12 px-4 md:py-24">
-      <div className="w-full max-w-4xl mx-auto text-center">
-        <UrgencyMessage />
-        <div className="mt-8 mb-8">
-          <Image
-            src="https://i.imgur.com/WzBd5MA.png"
-            alt="Product bundle"
-            width={600}
-            height={400}
-            className="mx-auto"
-          />
+    <section id="offer" className="w-full py-12 md:py-24 lg:py-32 bg-background">
+      <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
+        <div className="space-y-3">
+          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+            OFERTA VÁLIDA APENAS HOJE
+          </h2>
+          <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            Aproveite o preço especial e transforme sua vida acadêmica para sempre.
+          </p>
         </div>
-        <div className="bg-pixel-yellow text-black p-4 md:p-8 border-4 border-black shadow-pixel">
-          <div className="border-4 border-black p-4 md:p-6 bg-white">
-            <h3 className="text-xl md:text-3xl font-bold mb-4">STUDENT PRO</h3>
-
-            <div className="text-left text-sm md:text-base font-bold w-full max-w-md mx-auto p-4 space-y-2 bg-gray-100 border-2 border-black">
-              <p>✅ 3 TEMPLATES PREMIUM</p>
-              <p>✅ Métodos eficazes de estudo</p>
-              <p>✅ Acesso vitalício</p>
-              <p>✅ Acesso imediato</p>
-              <p>✅ Suporte via Whatsapp</p>
-              <p className="mt-4">
-                <span className="line-through">De: R$ 47,00</span>
-              </p>
-              <p className="text-lg md:text-xl font-bold">POR APENAS: R$ 19,90</p>
-            </div>
-            
-            <p className="text-black/50 text-sm mt-4">+472 Estudantes se tornaram PRO</p>
-
-            <PixelatedButton
-              size="lg"
-              className="bg-pixel-green text-black hover:bg-green-400 w-full md:w-auto animate-pulse-8bit text-base md:text-lg mt-6"
-              asChild
-            >
-              <a href="https://go.goatpayments.com.br/ttmmp81duz">
-                <span className="md:hidden">
-                  ME TORNAR UM
-                  <br />
-                  ESTUDANTE PRO
-                </span>
-                <span className="hidden md:inline">ME TORNAR UM ESTUDANTE PRO</span>
-              </a>
-            </PixelatedButton>
-          </div>
+        <div className="mx-auto w-full max-w-sm lg:max-w-none">
+          <Card className="lg:grid lg:grid-cols-2 lg:items-center shadow-2xl">
+            <CardHeader className="text-left p-6 lg:p-8">
+               <div className="mb-6">
+                <Image
+                    src="https://i.imgur.com/WzBd5MA.png"
+                    alt="Product bundle"
+                    width={600}
+                    height={400}
+                    className="mx-auto rounded-lg"
+                  />
+              </div>
+              <CardTitle className="text-3xl font-bold">STUDENT PRO</CardTitle>
+              <CardDescription>O pacote completo para o sucesso acadêmico.</CardDescription>
+                <div className="mt-4">
+                  <span className="text-4xl font-bold">R$ 19,90</span>
+                  <span className="ml-2 text-xl font-medium text-gray-500 line-through dark:text-gray-400">R$ 47,00</span>
+                </div>
+            </CardHeader>
+            <CardContent className="p-6 lg:p-8">
+              <ul className="grid gap-4 text-left">
+                <li className="flex items-center gap-2">
+                  <CheckIcon className="w-5 h-5 text-primary" />
+                  <span>3 TEMPLATES PREMIUM</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckIcon className="w-5 h-5 text-primary" />
+                  <span>Métodos eficazes de estudo</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckIcon className="w-5 h-5 text-primary" />
+                  <span>Acesso vitalício</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckIcon className="w-5 h-5 text-primary" />
+                  <span>Acesso imediato</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckIcon className="w-5 h-5 text-primary" />
+                  <span>Suporte via Whatsapp</span>
+                </li>
+              </ul>
+               <Button size="lg" className="w-full mt-8 text-lg" asChild>
+                <a href="https://go.goatpayments.com.br/ttmmp81duz">
+                  ME TORNAR UM ESTUDANTE PRO
+                </a>
+              </Button>
+               <p className="text-xs text-gray-500 mt-4 dark:text-gray-400">+472 Estudantes se tornaram PRO</p>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

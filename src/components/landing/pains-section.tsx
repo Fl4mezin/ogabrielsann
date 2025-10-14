@@ -4,7 +4,7 @@ import {
   ChartDownIcon,
   ClockIcon,
 } from '@/components/icons';
-import { PixelatedCard } from '@/components/ui/pixelated-card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const problems = [
   {
@@ -31,27 +31,43 @@ const problems = [
 
 export function PainsSection() {
   return (
-    <section className="w-full max-w-6xl py-12 px-4 md:py-24 text-center">
-      <h2 className="text-2xl md:text-4xl font-bold mb-10 text-shadow-pixel">
-        ❌ GAME OVER PARA SUA VIDA ACADÊMICA
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-        {problems.map((problem, index) => (
-          <PixelatedCard key={index} className="flex flex-col items-center p-6 text-center">
-            <problem.icon className="w-10 h-10 md:w-12 md:h-12 mb-4 text-pixel-red" />
-            <h3 className="text-base md:text-lg font-bold mb-2">
-              <span className="text-pixel-red">🔴</span> {problem.title}
-            </h3>
-            <p className="text-dark-gray text-xs md:text-sm">{problem.description}</p>
-          </PixelatedCard>
-        ))}
-      </div>
-      <div className="mt-10 md:mt-12">
-        <PixelatedCard className="bg-pixel-red text-white p-4 md:p-6 animate-heartbeat border-4 border-black">
-          <p className="text-base md:text-2xl font-bold">
-            = REPROVAS + ESTRESSE + FUTURO DESTRUÍDO
-          </p>
-        </PixelatedCard>
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="space-y-2">
+            <div className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-700 dark:bg-red-900/20 dark:text-red-400">
+              Sua Realidade
+            </div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-red-600">
+              ❌ GAME OVER PARA SUA VIDA ACADÊMICA
+            </h2>
+            <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              Se você se identifica com algum desses pontos, seu futuro acadêmico está em sério risco. A desorganização é o caminho mais curto para o fracasso.
+            </p>
+          </div>
+        </div>
+        <div className="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+          {problems.map((problem, index) => (
+            <Card key={index} className="transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+              <CardHeader className="flex flex-row items-center gap-4">
+                <div className="bg-red-100 dark:bg-red-900/20 p-3 rounded-full">
+                  <problem.icon className="w-8 h-8 text-red-600" />
+                </div>
+                <CardTitle>{problem.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-500 dark:text-gray-400">{problem.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+        <div className="text-center mt-8">
+            <div className="inline-block bg-red-600 text-white rounded-lg px-6 py-3">
+              <p className="text-lg md:text-2xl font-bold">
+                = REPROVAS + ESTRESSE + FUTURO DESTRUÍDO
+              </p>
+            </div>
+        </div>
       </div>
     </section>
   );

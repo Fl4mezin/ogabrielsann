@@ -8,7 +8,7 @@ import { Footer } from '@/components/landing/footer';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center overflow-x-hidden bg-white">
+    <main className="flex min-h-screen flex-col items-center overflow-x-hidden bg-background">
       <HeroSection />
       <PainsSection />
       <SolutionsSection />
