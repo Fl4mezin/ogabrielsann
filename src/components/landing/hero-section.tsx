@@ -18,7 +18,7 @@ export function HeroSection() {
             </p>
             <div className="flex justify-center py-6">
                 <Image
-                    src="https://i.imgur.com/JzOcusg.png"
+                    src="https://i.imgur.com/2TtK2Ot.png"
                     alt="Product preview"
                     width={800}
                     height={450}
