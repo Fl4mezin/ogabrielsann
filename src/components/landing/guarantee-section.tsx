@@ -51,7 +51,7 @@ export function GuaranteeSection() {
             <p className='text-muted-foreground mb-4'>Sua compra é 100% segura e sua satisfação é garantida.</p>
             <Button
               size="lg"
-              className="bg-green-500 text-white hover:bg-green-600 w-[90%] md:w-auto text-base md:text-lg shadow-lg"
+              className="bg-green-500 text-white hover:bg-green-600 w-[90%] md:w-auto text-base md:text-lg shadow-lg animate-heartbeat"
               asChild
             >
               <a href="https://pay.cakto.com.br/jwf4g7o_607138">

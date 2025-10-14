@@ -76,7 +76,7 @@ export function OfferSection() {
                   <span>Suporte via Whatsapp</span>
                 </li>
               </ul>
-               <Button size="lg" className="w-[90%] mx-auto sm:w-full mt-8 text-lg bg-green-500 hover:bg-green-600" asChild>
+               <Button size="lg" className="w-[90%] mx-auto sm:w-full mt-8 text-lg bg-green-500 hover:bg-green-600 animate-heartbeat" asChild>
                 <a href="https://pay.cakto.com.br/jwf4g7o_607138">
                   ME TORNAR UM ESTUDANTE PRO
                 </a>

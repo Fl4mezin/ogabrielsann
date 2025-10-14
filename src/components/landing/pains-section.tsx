@@ -70,7 +70,7 @@ export function PainsSection() {
             </div>
         </div>
          <div className="flex justify-center pt-12">
-            <Button asChild size="lg" className="w-[90%] mx-auto sm:w-auto sm:mx-0 bg-green-500 hover:bg-green-600">
+            <Button asChild size="lg" className="w-[90%] mx-auto sm:w-auto sm:mx-0 bg-green-500 hover:bg-green-600 animate-heartbeat">
                 <a href="#offer">QUERO MINHA APROVAÇÃO</a>
             </Button>
         </div>

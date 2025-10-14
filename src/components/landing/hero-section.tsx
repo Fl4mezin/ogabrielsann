@@ -27,7 +27,7 @@ export function HeroSection() {
             </div>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center pt-6">
-            <Button asChild size="lg" className="w-[90%] mx-auto sm:w-auto sm:mx-0 bg-green-500 hover:bg-green-600">
+            <Button asChild size="lg" className="w-[90%] mx-auto sm:w-auto sm:mx-0 bg-green-500 hover:bg-green-600 animate-heartbeat">
               <a href="#offer">Quero Mudar Isso Agora</a>
             </Button>
           </div>
