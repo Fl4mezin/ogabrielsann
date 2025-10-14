@@ -33,7 +33,7 @@ const testimonials = [
     avatarId: 'lucas-oliveira-avatar',
     text: 'Saí de aluno mediano para o melhor!',
     result: 'Meus pais ficaram orgulhosos!',
-    author: 'Lucas Oliveira, 17 anos',
+    author: 'Lucas Oliveira, 21 anos',
     rating: 5,
   },
 ];
