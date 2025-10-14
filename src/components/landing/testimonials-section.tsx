@@ -1,3 +1,4 @@
+
 import { StarIcon } from '@/components/icons';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
@@ -59,7 +60,7 @@ export function TestimonialsSection() {
                 🗣️ LEVEL UP DOS ESTUDANTES
             </h2>
             <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Veja o que nossos alunos PRO estão dizendo sobre a transformação em suas vidas acadêmicas.
+                Depoimentos reais de quem saiu do zero à aprovação.
             </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
