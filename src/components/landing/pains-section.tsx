@@ -4,6 +4,7 @@ import {
   ChartDownIcon,
   ClockIcon,
 } from '@/components/icons';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const problems = [
@@ -67,6 +68,11 @@ export function PainsSection() {
                 = REPROVAS + ESTRESSE + FUTURO DESTRUÍDO
               </p>
             </div>
+        </div>
+         <div className="flex justify-center pt-12">
+            <Button asChild size="lg" className="w-[90%] mx-auto sm:w-auto sm:mx-0 bg-green-500 hover:bg-green-600">
+                <a href="#offer">QUERO MINHA APROVAÇÃO</a>
+            </Button>
         </div>
       </div>
     </section>

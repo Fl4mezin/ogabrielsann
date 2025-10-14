@@ -4,6 +4,7 @@ import {
   CheckIcon,
   GraduationCapIcon,
 } from '@/components/icons';
+import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 
@@ -111,6 +112,11 @@ export function SolutionsSection() {
               </Card>
             );
           })}
+        </div>
+         <div className="flex justify-center pt-8">
+            <Button asChild size="lg" className="w-[90%] mx-auto sm:w-auto sm:mx-0 bg-green-500 hover:bg-green-600">
+                <a href="#offer">QUERO MEUS TEMPLATES</a>
+            </Button>
         </div>
       </div>
     </section>

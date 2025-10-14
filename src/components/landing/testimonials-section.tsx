@@ -3,6 +3,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
 
 
 const testimonials = [
@@ -85,6 +86,11 @@ export function TestimonialsSection() {
                 </Card>
               );
             })}
+        </div>
+        <div className="flex justify-center pt-12">
+            <Button asChild size="lg" className="w-[90%] mx-auto sm:w-auto sm:mx-0 bg-green-500 hover:bg-green-600">
+                <a href="#offer">QUERO SER O PRÓXIMO</a>
+            </Button>
         </div>
       </div>
     </section>
