@@ -1,16 +1,35 @@
+
+'use client';
+
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckIcon } from '@/components/icons';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+
+function OfferHeadline() {
+  const [currentDate, setCurrentDate] = useState('');
+
+  useEffect(() => {
+    const date = new Date();
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    setCurrentDate(`${day}/${month}`);
+  }, []);
+
+  return (
+    <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+      OFERTA VÁLIDA APENAS HOJE {currentDate}
+    </h2>
+  );
+}
 
 export function OfferSection() {
   return (
     <section id="offer" className="w-full py-12 md:py-24 lg:py-32 bg-background">
       <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
         <div className="space-y-3">
-          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-            OFERTA VÁLIDA APENAS HOJE
-          </h2>
+          <OfferHeadline />
           <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
             Aproveite o preço especial e transforme sua vida acadêmica para sempre.
           </p>
