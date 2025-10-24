@@ -13,8 +13,8 @@ export default function Home() {
       <HeroSection />
       <PainsSection />
       <SolutionsSection />
-      <TestimonialsSection />
       <OfferSection />
+      <TestimonialsSection />
       <GuaranteeSection />
       <Footer />
       <SocialProofNotification />
